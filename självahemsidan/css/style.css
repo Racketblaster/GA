@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color:#061d38;
+}
+
+/*#061d38*/
+#ProdBody{
+ padding: 0px;
+    margin: 0px;
+    background-color:#061d38;
+    background-image: url("body.png");
+}
+
+.copyright{
+    color:#db51a2;
+}
+p, h1, h2, h3, a, .brandTitle{
+    font-family: 'Lato', sans-serif;
+}
+
+.logo{
+    padding: 0px;
+    width: 40px; 
+    height: 40px;
+}
+
+.background{
+    background-image: url('body.png');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100%;
+}
+
+.brandTitle{
+    text-align: center; 
+    font-size: 5rem;
+}
+
+tfoot{
+    font-weight: bold;
+    color: grey;
+}
+
+.dottedList{
+    list-style-type: disc !important;
+    padding-left:1em !important;
+    margin-left:1em;
+}
+
+.navbarColor{
+    opacity: 0.97; 
+    background-color:#061d38; 
+    border-bottom: #db51a2 solid 4px;
+}
+
+.resultPos{
+    position:absolute; 
+    top:39px; 
+    padding: 0px;
+}
+
+.box{
+    background-color: rgba(255, 255, 255, 0.705);
+}
+
+.sokKolomn:hover{
+    background-color: rgba(233, 233, 233, 0.849);
+}
+.sokBildKolumn{
+    width: 64px;
+}
+
+.sokBild{
+    width: 100%;
+    height: 48px;
+}
+
+.sokText{
+    font-size: 25px;
+    color: unset;
+}
+
+.sokText:hover{
+    color: unset;
+    animation-name: searchName;
+    animation-duration: 2s;
+    text-decoration: none;
+}
+
+/*Min CSS animation, den är inte fin men den hjälper att se vilken man hoverar över*/
+@keyframes searchName{
+    50%{font-size: 28px;}
+}
+
+.behindHero{
+    height:370px; 
+    margin-bottom:-5px; 
+    position:static; 
+    transform:translateY(0%); 
+    background-color:black; 
+}
+
+#HeroI{
+    top:53px;
+    height: 380px;
+    position: absolute;
+    transform: translateY(-16.5%);
+    width:100%;
+    background-color:#061d38;
+}
+
+.containerO{
+    height:55px; 
+    width:350px;
+}
+
+.chooseImg{
+    height:150px; 
+    width: 100%; 
+    background-color:white;
+}
+
+.prodTitel{
+    text-align: center; 
+    font-size: 2rem;
+}
+
+.fillprodBild{
+    padding:0px;
+}
+
+.prodBild{
+    height:100%; 
+    width:100%;
+}
+
+.centerText{
+    text-align:center
+}
+
+.ShopCart{ 
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+  height:45px;
+}
+
+.indexProdText{
+color:white;
+font-weight: bold;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Product</title>
+
+   <!-- Bootstrap -->
+   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+   <!-- Inported Font -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+   <!-- style -->
+   <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+   <!--Denna gör min Navbar-->
+   <nav class="navbar navbar-expand-sm  fixed-top navbarColor">
+      <a href="../självahemsidan/index.html">
+         <img class="navbar-brand logo" alt="Picture not found." src="images/logga.png">
+      </a>
+
+      <!--Här så görs mina nav-items en hamburgermeny när skärmen blir liten-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--Mina länkar-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="../självahemsidan/index.html">Hem</a>
+            </li>
+         </ul>
+
+      </div>
+      <!--Sökfältet och sökknappen-->
+      <div class="container rounded col-lg-8">
+         <div class="input-group col-lg-8">
+            <input id="search" type="search" class="form-control rounded" placeholder="Starta din sökning"
+               aria-label="Search">
+            <button id="search-button" type="button" class="btn btn-outline-light" onclick="searchProd()">Sök</button>
+         </div>
+         <!--Sök resultatet-->
+         <table id="resultat" class="container rounded col-lg-8 box resultPos">
+         </table>
+      </div>
+
+      <!-- shopping carten -->
+      <a href="../api/addToCart.php">
+         <img class="ShopCart" alt="Picture not found." src="images/bråCart.png">
+      </a>
+   </nav>
+
+   <br>
+   <br>
+   <br>
+
+   <!--Vad produkten heter-->
+   <header id="header" class="container rounded col-lg-7  box prodTitel">
+   </header>
+
+   <br>
+   <br>
+
+   <main class="container">
+      <div class="row">
+         <!--Här är min bild på produkten-->
+         <div class="container rounded col-lg-3 box fillprodBild">
+            <img id="pictureTag" src="images/ThisWillBeReplaced.png" class="rounded prodBild" alt="Picture not found.">
+         </div>
+
+         <!--Här är mitt pris-->
+         <div class="box container rounded col-lg-3">
+            <h2>Pris:</h2>
+            <p id="priceTag"></p>
+
+            <form action="../api/addToCart.php" method="post">
+               <h2>Kvantitet:</h2>
+               <input type="hidden" name="idTag" id="idTag" value="-1">
+               <input type="number" name="quantityTag" id="quantityTag" min="0" value="0">
+
+               <input type="submit" value="Lägg i varukorg" class="btn btn-success btn-md">
+            </form>
+
+
+         </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+         <!--Här är beskrivningen-->
+         <div class="container rounded col-lg-8 box">
+            <h2>Beskrivning:</h2>
+            <p id="descriptionTag"></p>
+         </div>
+      </div>
+   </main>
+
+   <!--Min fotter-->
+   <footer class="container">
+      <div class="row">
+         <div class="text-center col-lg-6 offset-lg-3">
+            <p class="copyright">Copyright &copy; 2022 &middot; Remmacs tech</p>
+         </div>
+      </div>
+   </footer>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="js/jquery-3.4.1.min.js"></script>
+
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap-4.4.1.js"></script>
+
+   <!--Här är min Java-Script-->
+   <script src="js/productBuilder.js"></script>
+   <script src="js/productPage.js"></script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Remmacs Tech</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+    <!-- Inported Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+    <!--Denna gör min Navbar-->
+    <nav class="navbar navbar-expand-sm  fixed-top navbarColor">
+        <a href="index.html">
+            <img class="navbar-brand logo" alt="Picture not found." src="images/logga.png">
+        </a>
+
+        <!--Här så görs mina nav-items en hamburgermeny när skärmen blir liten-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Mina länkar-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#body">Hem</a>
+                </li>
+            </ul>
+
+        </div>
+        <!--Sökfältet och sökknappen-->
+        <div class="container rounded col-lg-8">
+            <div class="input-group col-lg-8">
+                <input id="search" type="search" class="form-control rounded" placeholder="Starta din sökning"
+                    aria-label="Search">
+                <button id="search-button" type="button" class="btn btn-outline-light"
+                    onclick="searchProd()">Sök</button>
+            </div>
+            <!--Sök resultatet-->
+            <table id="resultat" class="container rounded col-lg-8 box resultPos">
+            </table>
+        </div>
+
+        <!-- shopping carten -->
+        <a href="../api/addToCart.php">
+            <img class="ShopCart" alt="Picture not found." src="images/bråCart.png">
+        </a>
+    </nav>
+
+
+
+
+    <main>
+        <div class="containerO"></div>
+        <div class="jumbotron jumbotron-fluid behindHero">
+
+            <img src="images/Hero2.png" id="HeroI">
+
+        </div>
+
+        <!-- img -->
+        <div class="container col-lg-11" style="height:100%; border-radius:20px;">
+            <br>
+            <!-- individuella bilder -->
+            <div class="row">
+                <div class="col-1"></div>
+                <a class="col-2" href="productPage.html?productId=1">
+                    <img id="bild1" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text1">error</p>
+                </a>
+                <div class="col-2"></div>
+                <a class="col-2" href="productPage.html?productId=4">
+                    <img id="bild2" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text2">error</p>
+                </a>
+                <div class="col-2"></div>
+                <a class="col-2" href="productPage.html?productId=7">
+                    <img id="bild3" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text3">error</p>
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <a class="col-2" href="productPage.html?productId=2">
+                    <img id="bild4" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text4">error</p>
+                </a>
+                <div class="col-2"></div>
+                <a class="col-2" href="productPage.html?productId=5">
+                    <img id="bild5" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text5">error</p>
+                </a>
+                <div class="col-2"></div>
+                <a class="col-2" href="productPage.html?productId=8">
+                    <img id="bild6" class="chooseImg" alt="Picture not found.">
+                    <p class="text-center indexProdText" id="text6">error</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <br>
+
+
+
+    </div>
+    <footer class="container">
+        <div class="row">
+            <div class="text-center col-lg-6 offset-lg-3">
+                <p class="copyright">Copyright &copy; 2022 &middot; Remmacs tech</p>
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <!--Mitt kontakt formulär-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+
+    <!--Här är min Java-Script-->
+    <script src="js/productBuilder.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
